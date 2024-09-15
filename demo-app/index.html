@@ -4,24 +4,26 @@
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Demo of (S3 + parquet + OPFS)</title>
-      <script type="module" crossorigin src="./assets/index-lsgVTLFb.js"></script>
-      <link rel="stylesheet" crossorigin href="./assets/index-B6xWK1z5.css">
+      <script type="module" crossorigin src="./assets/index-CQBIfern.js"></script>
+      <link rel="stylesheet" crossorigin href="./assets/index-CsIRg9by.css">
     </head>
     <body>
         <div id="container">
             <div id="form">
-                <div id="inputs">
+                <div class="inputs">
                     <label for="s3url_textarea">S3 URL</label>
                     <textarea id="s3url_textarea"></textarea>
                     <label for="db_file_name_input">DB File Name</label>
                     <input id="db_file_name_input">
-                    <label for="sql_input">SQL</label>
-                    <input id="sql_input">
                 </div>
                 <div class="buttons">
                     <button id="save_button">Create DB File</button>
                     <div id="count_label"></div>
                     <button id="download_button" disabled="disabled">Download DB File</button>
+                </div>
+                <div class="inputs">
+                    <label for="sql_input">SQL</label>
+                    <input id="sql_input">
                 </div>
                 <div class="buttons">
                     <button id="sql_button">SQL Send</button>
