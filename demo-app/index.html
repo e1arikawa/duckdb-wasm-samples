@@ -4,8 +4,8 @@
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Demo of (S3 + parquet + OPFS)</title>
-      <script type="module" crossorigin src="./assets/index-MOQwnoDd.js"></script>
-      <link rel="stylesheet" crossorigin href="./assets/index-D-2dFo0Y.css">
+      <script type="module" crossorigin src="./assets/index-fzlyT8em.js"></script>
+      <link rel="stylesheet" crossorigin href="./assets/index-CxUkMqYF.css">
     </head>
     <body>
         <div id="container">
@@ -31,8 +31,13 @@
                 <div id="output_holder">
                     <div id="output"></div>
                 </div>
-                <input type="file" id="db_file_input" multiple>
-                <button id="local_upload_button">save to OPFS</button>
+                <div class="upload-container">
+                    <input type="file" id="db_file_input" multiple>
+                    <button id="local_upload_button">save to OPFS</button>
+                </div>
+                <div id="dropzone">
+                    Drag & Drop File save to OPFS
+                </div>
                 <!--
                 <div class="inputs">
                     <label for="extension_url_input">Extension URL</label>
