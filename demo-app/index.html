@@ -1,51 +1,44 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Demo of (S3 + parquet + OPFS)</title>
-      <script type="module" crossorigin src="./assets/index-03FPDsXx.js"></script>
-      <link rel="stylesheet" crossorigin href="./assets/index-CxUkMqYF.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>World Population Chart</title>
+      <script type="module" crossorigin src="./assets/index-PqE0Trd0.js"></script>
+      <link rel="stylesheet" crossorigin href="./assets/index-BhuDnmcy.css">
     </head>
     <body>
-        <div id="container">
-            <div id="form">
-                <div class="inputs">
-                    <label for="s3url_textarea">S3 URL</label>
-                    <textarea id="s3url_textarea"></textarea>
-                    <label for="db_file_name_input">DB File Name</label>
-                    <input id="db_file_name_input">
+        <div class="container">
+            <!-- 左側のペイン (グラフ表示) -->
+            <div class="left-pane">
+                <div class="chart-title-container">
+                    <h1 id="chart-title">Population Chart</h1> <!-- グラフタイトル（動的に更新） -->
+                    <button id="data-title">DB Loading...</button>
                 </div>
-                <div class="buttons">
-                    <button id="save_button">Create DB File</button>
-                    <div id="count_label"></div>
-                    <button id="download_button" disabled="disabled">Download DB File</button>
+                <div class="list-section-container">
+                    <canvas id="populationChart"></canvas> <!-- グラフを表示するキャンバス -->
                 </div>
-                <div class="inputs">
-                    <label for="sql_input">SQL</label>
-                    <input id="sql_input">
+            </div>
+
+            <!-- 右側のペイン (国/年度リストと切り替えボタン) -->
+            <div class="right-pane">
+                <div class="toggle-buttons">
+                    <button id="toggle-country">Country</button> <!-- 国の表示切り替えボタン -->
+                    <button id="toggle-year">Year</button> <!-- 年の表示切り替えボタン -->
                 </div>
-                <div class="buttons">
-                    <button id="sql_button">SQL Send</button>
+                <div class="list-section-header">
+                    <h1 id="right-pane-title">Select a Country:</h1> <!-- リストセクションのタイトル -->
+                    <div class="search_word_holder">
+                        <input id="search_word" placeholder="Search Word">
+                    </div>
                 </div>
-                <div id="output_holder">
-                    <div id="output"></div>
+                <div class="list-section-container">
+                    <div class="list-section">
+                        <ul id="list-data"></ul> <!-- 国/年のリストが動的に挿入される -->
+                    </div>
                 </div>
-                <div class="upload-container">
-                    <input type="file" id="db_file_input" multiple>
-                    <button id="local_upload_button">save to OPFS</button>
-                </div>
-                <div id="dropzone">
-                    Drag & Drop File save to OPFS
-                </div>
-                <!--
-                <div class="inputs">
-                    <label for="extension_url_input">Extension URL</label>
-                    <input id="extension_url_input">
-                </div>
-                <button id="install_button">install Extension</button>
-                -->
             </div>
         </div>
+
     </body>
 </html>
