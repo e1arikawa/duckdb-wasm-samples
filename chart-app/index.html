@@ -4,14 +4,17 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>World Population Chart</title>
-      <script type="module" crossorigin src="./assets/index-rkxrf7Sy.js"></script>
-      <link rel="stylesheet" crossorigin href="./assets/index-YEIPwgBs.css">
+      <script type="module" crossorigin src="./assets/index-DqatDzrr.js"></script>
+      <link rel="stylesheet" crossorigin href="./assets/index-BhuDnmcy.css">
     </head>
     <body>
         <div class="container">
             <!-- 左側のペイン (グラフ表示) -->
             <div class="left-pane">
-                <h1 id="chart-title">Population Chart</h1> <!-- グラフタイトル（動的に更新） -->
+                <div class="chart-title-container">
+                    <h1 id="chart-title">Population Chart</h1> <!-- グラフタイトル（動的に更新） -->
+                    <button id="data-title" style="display: none">Load Data</button>
+                </div>
                 <div class="list-section-container">
                     <canvas id="populationChart"></canvas> <!-- グラフを表示するキャンバス -->
                 </div>
