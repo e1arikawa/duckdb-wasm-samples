@@ -9,8 +9,6 @@
         <div id="container">
             <div id="form">
                 <div class="inputs">
-                    <label for="s3url_textarea">S3 URL</label>
-                    <textarea id="s3url_textarea"></textarea>
                     <label for="db_file_name_input">DB File Name</label>
                     <input id="db_file_name_input">
                 </div>
@@ -29,6 +27,11 @@
                 <div id="output_holder">
                     <div id="output"></div>
                 </div>
+                <hr>
+                <div class="inputs">
+                    <label for="s3url_textarea">S3 URL</label>
+                    <textarea id="s3url_textarea"></textarea>
+                </div>
                 <div class="upload-container">
                     <input type="file" id="db_file_input" multiple>
                     <button id="local_upload_button">save to OPFS</button>
@@ -36,13 +39,6 @@
                 <div id="dropzone">
                     Drag & Drop File save to OPFS
                 </div>
-                <!--
-                <div class="inputs">
-                    <label for="extension_url_input">Extension URL</label>
-                    <input id="extension_url_input">
-                </div>
-                <button id="install_button">install Extension</button>
-                -->
             </div>
         </div>
         <script type="module" src="/src/main.ts"></script>
