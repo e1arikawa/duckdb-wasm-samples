@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>World Population Chart</title>
+    </head>
+    <body>
+        <div class="container">
+            <!-- 左側のペイン (グラフ表示) -->
+            <div class="left-pane">
+                <div class="chart-title-container">
+                    <h1 id="chart-title">Population Chart</h1> <!-- グラフタイトル（動的に更新） -->
+                    <button id="data-title">DB Loading...</button>
+                </div>
+                <div class="list-section-container">
+                    <canvas id="populationChart"></canvas> <!-- グラフを表示するキャンバス -->
+                </div>
+            </div>
+
+            <!-- 右側のペイン (国/年度リストと切り替えボタン) -->
+            <div class="right-pane">
+                <div class="toggle-buttons">
+                    <button id="toggle-country">Country</button> <!-- 国の表示切り替えボタン -->
+                    <button id="toggle-year">Year</button> <!-- 年の表示切り替えボタン -->
+                </div>
+                <div class="list-section-header">
+                    <h1 id="right-pane-title">Select a Country:</h1> <!-- リストセクションのタイトル -->
+                    <div class="search_word_holder">
+                        <input id="search_word" placeholder="Search Word">
+                    </div>
+                </div>
+                <div class="list-section-container">
+                    <div class="list-section">
+                        <ul id="list-data"></ul> <!-- 国/年のリストが動的に挿入される -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="module" src="/src/main.ts"></script>
+    </body>
+</html>
