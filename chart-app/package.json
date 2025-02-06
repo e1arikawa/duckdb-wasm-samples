@@ -13,7 +13,7 @@
     "vite": "^6.0.3"
   },
   "dependencies": {
-    "@akabana/duckdb-wasm": "1.30.0-beta.7",
+    "@akabana/duckdb-wasm": "1.30.0-beta.11",
     "apache-arrow": "^17.0.0",
     "chart.js": "^4.4.6"
   }
